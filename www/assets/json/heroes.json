@@ -1,0 +1,90 @@
+[
+  {
+    "id": 11,
+    "name": "Chewbacca",
+    "twitter": "@chy",
+    "description":"volunteer since 2010 in Joint",
+    "likes":15,
+    "password":"1234"
+  },
+  {
+    "id": 12,
+    "name": "Rey",
+    "twitter": "@rey",
+    "description":"volunteer since 2012 in Joint",
+    "likes":16,
+    "password":"1234"
+  },
+  {
+    "id": 13,
+    "name": "Finn (FN2187)",
+    "twitter": "@finn",
+    "description":"volunteer since 2013 in Joint",
+    "likes":19,
+    "password":"1234"
+  },
+  {
+    "id": 14,
+    "name": "Han Solo",
+    "twitter": "@i_know",
+    "description":"volunteer since 2017 in Joint",
+    "likes":175,
+    "password":"1234"
+  },
+  {
+    "id": 15,
+    "name": "Leia Organa",
+    "twitter": "@organa",
+    "description":"volunteer since 2016 in Joint",
+    "likes":115,
+    "password":"1234"
+  },
+  {
+    "id": 16,
+    "name": "Luke Skywalker",
+    "twitter": "@chosen_one_son",
+    "description":"volunteer since 2010 in Joint",
+    "likes":156,
+    "password":"1234"
+  },
+  {
+    "id": 17,
+    "name": "Poe Dameron",
+    "twitter": "@i_am_poe",
+    "description":"volunteer since 2011 in Joint",
+    "likes":8,
+    "password":"1234"
+  },
+  {
+    "id": 18,
+    "name": "Kylo Ren",
+    "twitter": "@daddy_issues",
+    "description":"volunteer since 2014 in Joint",
+    "likes":17,
+    "password":"1234"
+  },
+  {
+    "id": 19,
+    "name": "Supreme Commander Snoke",
+    "twitter": "@snoker",
+    "description":"volunteer since 2015 in Joint",
+    "likes":1,
+    "password":"1234"
+  },
+  {
+    "id": 20,
+    "name": "R2-D2",
+    "twitter": "@r2d2",
+    "description":"volunteer since 2017 in Joint",
+    "likes":13,
+    "password":"1234"
+  },
+  {
+    "id": 21,
+    "name": "BB8",
+    "twitter": "@bb_eight",
+    "description":"volunteer since 2014 in Joint",
+    "likes":12,
+    "password":"1234"
+  }
+]
