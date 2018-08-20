@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>About us</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+      <ion-segment  small [(ngModel)]="relationship" color="primary">
+        <ion-segment-button value="aboutUs" (ionSelect)="selectedAboutUs()">
+          About us
+        </ion-segment-button>
+        <ion-segment-button value="volunteering" (ionSelect)="selectedVolunteering()">
+          Volunteering
+        </ion-segment-button>
+      </ion-segment>
+      <div *ngIf="relationship=='aboutUs'" class="contain">
+          <p>Our association is a non-profit association that help to child,adults and animals...</p>
+          <p>we choose <a (click)="showToast()">our heroes</a></p>
+      </div>
+      <div *ngIf="relationship=='volunteering'" class="contain">
+          <h3>Our volunteering</h3>
+          <ion-slides class="image-slider" loop="true" slidesPerView="2">
+              <ion-slide *ngFor="let img of images">
+                <img src="../../assets/imgs/slide/{{img}}" class="thumb-img" imageViewer/>
+              </ion-slide>
+            </ion-slides>
+       </div>
+    </ion-content>

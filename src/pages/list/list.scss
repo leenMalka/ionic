@@ -1,0 +1,12 @@
+.btnHeart:active #heart{
+  transform:scale(2)
+}
+#heart{
+ transition: transform .1s;
+}
+.btnHeart{
+color:grey;
+}
+.list ion-card:first-of-type{
+margin-top: 114px;
+}

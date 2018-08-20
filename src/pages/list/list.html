@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Heroes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list">
+    <ion-header>
+
+        <ion-navbar no-border-bottom>
+          <ion-title>Our heroes</ion-title>
+        </ion-navbar>
+      
+        <ion-toolbar no-border-top>
+          <ion-searchbar placeholder="Filter heroes..." (ionInput)="onInput($event)" [(ngModel)]="search"></ion-searchbar>
+        </ion-toolbar>
+      
+      </ion-header>
+
+    <ion-card *ngFor="let hero of  heroList">
+
+        <img src="../../assets/imgs/Cart-Hero.png"/>
+    
+        <ion-card-content>
+          <ion-card-title>
+           {{hero.name}}
+          </ion-card-title>
+            <p>
+              {{hero.description}} 
+            </p>
+  
+        </ion-card-content>
+    
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button icon-left clear small color="light" class="btnHeart" id="btnHeart{{hero.id}}" (click)="AddLike(hero);"  voted="false">
+                  <ion-icon name="heart" id="heart"></ion-icon>
+                  <div>{{hero.likes}} Likes</div>
+                </button>
+             </ion-col>
+             <ion-col>
+                <button ion-button icon-left clear small color="calm">
+                  <ion-icon name='logo-twitter'></ion-icon>
+                  {{hero.twitter}}
+                </button>
+              </ion-col>
+             <ion-col>
+                <button ion-button icon-left clear small style="color:#32DBEC" (click)="showComment(hero.id)">
+                  <ion-icon name="text"></ion-icon>
+                  <div>{{getNumOfComment(hero.id)}} Comments</div>
+                </button>
+              </ion-col>
+        </ion-row>
+      </ion-card>
+</ion-content>

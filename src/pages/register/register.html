@@ -1,0 +1,43 @@
+<ion-header>
+        <ion-navbar>
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>Register</ion-title>
+        </ion-navbar>
+      </ion-header>
+<ion-content>
+<ion-item>
+        <ion-label stacked color="primary">Mobile</ion-label>
+        <ion-input type="tel" value=""></ion-input>
+        <ion-icon color="primary" item-end ios="ios-chatbubbles-outline" md="md-chatbubbles"></ion-icon>
+        <ion-icon color="primary" item-end ios="ios-call-outline" md="md-call"></ion-icon>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked color="primary">Email</ion-label>
+        <ion-icon color="primary" item-end ios="ios-mail-outline" md="md-mail"></ion-icon>
+        <ion-input type="email" value=""></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked color="primary">Birthday</ion-label>
+        <ion-icon color="primary" item-end ios="ios-calendar-outline" md="md-calendar"></ion-icon>
+        <ion-datetime displayFormat="MMM/DD/YYYY"></ion-datetime>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked color="primary">Address</ion-label>
+        <ion-icon color="primary" item-end ios="ios-home-outline" md="md-home"></ion-icon>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      
+      <ion-label stacked color="primary" style="margin-left:16px;">Help to:</ion-label>
+      <ion-item *ngFor="let item of list" radio-group>
+            <ion-icon  [ios]="item.icon" item-start color="{{item.color}}"></ion-icon>
+            <ion-label>{{item.name}}</ion-label>
+            <ion-radio value="item.name" name="rb" [checked]="item.checked"></ion-radio>
+        </ion-item>
+
+ </ion-content>
+  

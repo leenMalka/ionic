@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+      <button *ngIf="!currntUser" ion-button  small float-right margin-top  margin-right (click)="openLogin()">
+        Login
+      </button>
+      <button *ngIf="currntUser" ion-button  small float-right margin-top margin-right (click)="LogOut()">
+          LogOut
+        </button>
+      <p margin-left *ngIf="currntUser" class="name">
+         Hello,{{currntUser.name}}
+      </p>
+</ion-header>
+
+<ion-content padding>
+      <h3 margin-left>
+          Top heroes for this year
+        </h3>
+  <hr>
+    <ion-card *ngFor="let hero of  heroList">
+
+        <img src="../../assets/imgs/Cart-Hero.png"/>
+    
+        <ion-card-content>
+          <ion-card-title>
+           {{hero.name}}
+          </ion-card-title>
+          <p>
+            {{hero.description}} 
+          </p>
+        </ion-card-content>
+    
+        <ion-row no-padding>
+          <ion-col text-right>
+            <button ion-button clear small color="calm" icon-start>
+              <ion-icon name='logo-twitter'></ion-icon>
+              {{hero.twitter}}
+            </button>
+          </ion-col>
+        </ion-row>
+    
+      </ion-card>
+
+</ion-content>
